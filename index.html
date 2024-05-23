@@ -1,0 +1,461 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teepee Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="banner">
+    <div id="svgContainer" class="svg-container">
+      <svg id="teepeeSvg" viewBox="-900 -900 2500 2500">
+        <style type="text/css">
+          .gradientFill { fill: url(#gradient1); }
+        </style>
+        <radialGradient id="gradient1" cx="247.7233" cy="540.1967" r="552.6242" gradientTransform="matrix(1 0 0 -1 0 600.1102)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" style="stop-color:#EF7D67"/>
+          <stop offset="0.9933" style="stop-color:#38B2E7"/>
+        </radialGradient>
+        <g>
+          <path class="gradientFill shape" id="baseShape" d="M536.61,600H231.35c-8.08,0-11.2-10.52-4.44-14.91l228.1-148.37c4.01-2.6,9.4-1.18,11.61,3.07l77.18,148.35 C546.6,593.53,542.69,600,536.61,600z"/>
+          <path class="gradientFill shape" id="leftPole" d="M450.48,408.78L382.36,277.8c-2.91-5.6-10.38-6.88-15-2.55L76.15,548l-0.02,0.02l-19.76,38 c-3.3,6.37,1.32,13.98,8.49,13.98h104.64c1.87,0,3.67-0.55,5.21-1.55l272.52-177.24C451.35,418.52,452.76,413.15,450.48,408.78z"/>
+          <path class="gradientFill shape" id="leftPanel" d="M269.37,86.1c2.44,4.67,7.22,7.35,12.13,7.35c2.14,0,4.28-0.5,6.31-1.55c6.69-3.48,9.29-11.72,5.81-18.42l-28.07-53.98 c-3.48-6.69-11.72-9.29-18.42-5.81c-6.69,3.46-9.31,11.72-5.83,18.42L269.37,86.1z"/>
+          <path class="gradientFill shape" id="rightPanel" d="M144.88,459.51l217.49-203.7c3.39-3.16,4.26-8.22,2.12-12.34l-55.76-107.21c-3.87-7.42-14.53-7.42-18.4,0L128.6,447.17 C123.23,457.5,136.39,467.47,144.88,459.51z"/>
+          <path class="gradientFill shape" id="leftTopPole" d="M304.73,110.33c2.03,1.05,4.17,1.55,6.31,1.55c4.92,0,9.7-2.69,12.11-7.35l43.99-84.56 c3.48-6.69,0.89-14.94-5.81-18.42c-6.69-3.48-14.94-0.89-18.42,5.81l-43.99,84.56C295.44,98.6,298.03,106.84,304.73,110.33z"/>
+          <path class="gradientFill shape" id="rightTopPole" d="M269.37,86.1c2.44,4.67,7.22,7.35,12.13,7.35c2.14,0,4.28-0.5,6.31-1.55c6.69-3.48,9.29-11.72,5.81-18.42 l-28.07-53.98c-3.48-6.69-11.72-9.29-18.42-5.81c-6.69,3.46-9.31,11.72-5.83,18.42L269.37,86.1z"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div>
+    <h2>Teepee Animations: </h2>
+    <button onclick="setAnimation('variant1')">Variant 1</button>
+    <button onclick="setAnimation('variant2')">Variant 2</button>
+    <button onclick="setAnimation('variant3')">Variant 3</button>
+    <button onclick="setAnimation('variant4')">Variant 4</button>
+    <button onclick="setAnimation('variant5')">Variant 5</button>
+    <button onclick="setAnimation('variant6')">Variant 6</button>
+    <button onclick="setAnimation('variant7')">Variant 7</button>
+  </div>
+
+</body>
+
+<styles>
+.banner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.svg-container {
+  width: 50%;
+  height: auto;
+}
+
+svg {
+  width: 100%;
+  height: 460px;
+}
+
+.shape {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+/* Animation Variant 1 */
+.variant1 #baseShape {
+  animation-name: animateBaseShapeVariant1;
+}
+
+.variant1 #leftPole {
+  animation-name: animateLeftPoleVariant1;
+}
+
+.variant1 #leftPanel {
+  animation-name: animateLeftPanelVariant1;
+}
+
+.variant1 #rightPanel {
+  animation-name: animateRightPanelVariant1;
+}
+
+.variant1 #leftTopPole {
+  animation-name: animateTopPoleLeftVariant1;
+}
+
+.variant1 #rightTopPole {
+  animation-name: animateTopPoleRightVariant1;
+}
+
+@keyframes animateBaseShapeVariant1 {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes animateLeftPoleVariant1 {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes animateLeftPanelVariant1 {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes animateRightPanelVariant1 {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes animateTopPoleLeftVariant1 {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes animateTopPoleRightVariant1 {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* Animation Variant 2 */
+.variant2 #baseShape {
+  animation-name: animateBaseShapeVariant2;
+}
+
+.variant2 #leftPole {
+  animation-name: animateLeftPoleVariant2;
+}
+
+.variant2 #leftPanel {
+  animation-name: animateLeftPanelVariant2;
+}
+
+.variant2 #rightPanel {
+  animation-name: animateRightPanelVariant2;
+}
+
+.variant2 #leftTopPole {
+  animation-name: animateTopPoleLeftVariant2;
+}
+
+.variant2 #rightTopPole {
+  animation-name: animateTopPoleRightVariant2;
+}
+
+@keyframes animateBaseShapeVariant2 {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes animateLeftPoleVariant2 {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes animateLeftPanelVariant2 {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes animateRightPanelVariant2 {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes animateTopPoleLeftVariant2 {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes animateTopPoleRightVariant2 {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* Animation Variant 3 (Spinning Pieces) */
+.variant3 #baseShape {
+  animation-name: animateBaseShapeVariant3;
+}
+
+.variant3 #leftPole {
+  animation-name: animateLeftPoleVariant3;
+}
+
+.variant3 #leftPanel {
+  animation-name: animateLeftPanelVariant3;
+}
+
+.variant3 #rightPanel {
+  animation-name: animateRightPanelVariant3;
+}
+
+.variant3 #leftTopPole {
+  animation-name: animateTopPoleLeftVariant3;
+}
+
+.variant3 #rightTopPole {
+  animation-name: animateTopPoleRightVariant3;
+}
+
+@keyframes animateBaseShapeVariant3 {
+  from { transform: rotate(0deg) translateX(-100%); }
+  to { transform: rotate(360deg) translateX(0); }
+}
+
+@keyframes animateLeftPoleVariant3 {
+  from { transform: rotate(0deg) translateX(100%); }
+  to { transform: rotate(-360deg) translateX(0); }
+}
+
+@keyframes animateLeftPanelVariant3 {
+  from { transform: rotate(0deg) translateY(-100%); }
+  to { transform: rotate(360deg) translateY(0); }
+}
+
+@keyframes animateRightPanelVariant3 {
+  from { transform: rotate(0deg) translateY(100%); }
+  to { transform: rotate(-360deg) translateY(0); }
+}
+
+@keyframes animateTopPoleLeftVariant3 {
+  from { transform: rotate(0deg) translateY(-100%); }
+  to { transform: rotate(360deg) translateY(0); }
+}
+
+@keyframes animateTopPoleRightVariant3 {
+  from { transform: rotate(0deg) translateY(-100%); }
+  to { transform: rotate(-360deg) translateY(0); }
+}
+
+/* Animation Variant 4 (Flying Pieces) */
+.variant4 #baseShape {
+  animation-name: animateBaseShapeVariant4;
+}
+
+.variant4 #leftPole {
+  animation-name: animateLeftPoleVariant4;
+}
+
+.variant4 #leftPanel {
+  animation-name: animateLeftPanelVariant4;
+}
+
+.variant4 #rightPanel {
+  animation-name: animateRightPanelVariant4;
+}
+
+.variant4 #leftTopPole {
+  animation-name: animateTopPoleLeftVariant4;
+}
+
+.variant4 #rightTopPole {
+  animation-name: animateTopPoleRightVariant4;
+}
+
+@keyframes animateBaseShapeVariant4 {
+  0% { transform: translateX(-100%) rotate(0deg); }
+  50% { transform: translateX(0) rotate(180deg); }
+  100% { transform: translateX(0) rotate(360deg); }
+}
+
+@keyframes animateLeftPoleVariant4 {
+  0% { transform: translateX(100%) rotate(0deg); }
+  50% { transform: translateX(0) rotate(-180deg); }
+  100% { transform: translateX(0) rotate(-360deg); }
+}
+
+@keyframes animateLeftPanelVariant4 {
+  0% { transform: translateY(-100%) rotate(0deg); }
+  50% { transform: translateY(0) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+@keyframes animateRightPanelVariant4 {
+  0% { transform: translateY(100%) rotate(0deg); }
+  50% { transform: translateY(0) rotate(-180deg); }
+  100% { transform: translateY(0) rotate(-360deg); }
+}
+
+@keyframes animateTopPoleLeftVariant4 {
+  0% { transform: translateY(-100%) rotate(0deg); }
+  50% { transform: translateY(0) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+@keyframes animateTopPoleRightVariant4 {
+  0% { transform: translateY(-100%) rotate(0deg); }
+  50% { transform: translateY(0) rotate(-180deg); }
+  100% { transform: translateY(0) rotate(-360deg); }
+}
+
+/* Animation Variant 5 (Visually Impressive) */
+.variant5 #baseShape {
+  animation-name: animateBaseShapeVariant5;
+}
+
+.variant5 #leftPole {
+  animation-name: animateLeftPoleVariant5;
+}
+
+.variant5 #leftPanel {
+  animation-name: animateLeftPanelVariant5;
+}
+
+.variant5 #rightPanel {
+  animation-name: animateRightPanelVariant5;
+}
+
+.variant5 #leftTopPole {
+  animation-name: animateTopPoleLeftVariant5;
+}
+
+.variant5 #rightTopPole {
+  animation-name: animateTopPoleRightVariant5;
+}
+
+@keyframes animateBaseShapeVariant5 {
+  0% { transform: translateX(-100%) scale(0.5); opacity: 0; }
+  50% { transform: translateX(0) scale(1.2); opacity: 0.5; }
+  100% { transform: translateX(0) scale(1); opacity: 1; }
+}
+
+@keyframes animateLeftPoleVariant5 {
+  0% { transform: translateX(100%) scale(0.5); opacity: 0; }
+  50% { transform: translateX(0) scale(1.2); opacity: 0.5; }
+  100% { transform: translateX(0) scale(1); opacity: 1; }
+}
+
+@keyframes animateLeftPanelVariant5 {
+  0% { transform: translateY(-100%) scale(0.5); opacity: 0; }
+  50% { transform: translateY(0) scale(1.2); opacity: 0.5; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes animateRightPanelVariant5 {
+  0% { transform: translateY(100%) scale(0.5); opacity: 0; }
+  50% { transform: translateY(0) scale(1.2); opacity: 0.5; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes animateTopPoleLeftVariant5 {
+  0% { transform: translateY(-100%) scale(0.5); opacity: 0; }
+  50% { transform: translateY(0) scale(1.2); opacity: 0.5; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes animateTopPoleRightVariant5 {
+  0% { transform: translateY(-100%) scale(0.5); opacity: 0; }
+  50% { transform: translateY(0) scale(1.2); opacity: 0.5; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Animation Variant 6 (Particle Effect) */
+.variant6 #baseShape,
+.variant6 #leftPole,
+.variant6 #leftPanel,
+.variant6 #rightPanel,
+.variant6 #leftTopPole,
+.variant6 #rightTopPole {
+  animation-name: animateParticleEffect;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animateParticleEffect {
+  0% { transform: translateX(0) translateY(0) scale(1) rotate(0deg); opacity: 1; }
+  25% { transform: translateX(20px) translateY(-20px) scale(0.8) rotate(45deg); opacity: 0.8; }
+  50% { transform: translateX(-20px) translateY(20px) scale(1.2) rotate(-45deg); opacity: 0.6; }
+  75% { transform: translateX(20px) translateY(-20px) scale(0.8) rotate(45deg); opacity: 0.8; }
+  100% { transform: translateX(0) translateY(0) scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Animation Variant 7 (Advanced Visuals) */
+.variant7 #baseShape {
+  animation-name: animateBaseShapeVariant7;
+}
+
+.variant7 #leftPole {
+  animation-name: animateLeftPoleVariant7;
+}
+
+.variant7 #leftPanel {
+  animation-name: animateLeftPanelVariant7;
+}
+
+.variant7 #rightPanel {
+  animation-name: animateRightPanelVariant7;
+}
+
+.variant7 #leftTopPole {
+  animation-name: animateTopPoleLeftVariant7;
+}
+
+.variant7 #rightTopPole {
+  animation-name: animateTopPoleRightVariant7;
+}
+
+@keyframes animateBaseShapeVariant7 {
+  0% { transform: translateX(-100%) scale(0.5) rotate(0deg); opacity: 0; }
+  25% { transform: translateX(0) scale(1) rotate(90deg); opacity: 0.25; }
+  50% { transform: translateX(50%) scale(1.5) rotate(180deg); opacity: 0.5; }
+  75% { transform: translateX(-50%) scale(1.2) rotate(270deg); opacity: 0.75; }
+  100% { transform: translateX(0) scale(1) rotate(360deg); opacity: 1; }
+}
+
+@keyframes animateLeftPoleVariant7 {
+  0% { transform: translateX(100%) scale(0.5) rotate(0deg); opacity: 0; }
+  25% { transform: translateX(0) scale(1) rotate(-90deg); opacity: 0.25; }
+  50% { transform: translateX(-50%) scale(1.5) rotate(-180deg); opacity: 0.5; }
+  75% { transform: translateX(50%) scale(1.2) rotate(-270deg); opacity: 0.75; }
+  100% { transform: translateX(0) scale(1) rotate(-360deg); opacity: 1; }
+}
+
+@keyframes animateLeftPanelVariant7 {
+  0% { transform: translateY(-100%) scale(0.5) rotate(0deg); opacity: 0; }
+  25% { transform: translateY(0) scale(1) rotate(90deg); opacity: 0.25; }
+  50% { transform: translateY(50%) scale(1.5) rotate(180deg); opacity: 0.5; }
+  75% { transform: translateY(-50%) scale(1.2) rotate(270deg); opacity: 0.75; }
+  100% { transform: translateY(0) scale(1) rotate(360deg); opacity: 1; }
+}
+
+@keyframes animateRightPanelVariant7 {
+  0% { transform: translateY(100%) scale(0.5) rotate(0deg); opacity: 0; }
+  25% { transform: translateY(0) scale(1) rotate(-90deg); opacity: 0.25; }
+  50% { transform: translateY(-50%) scale(1.5) rotate(-180deg); opacity: 0.5; }
+  75% { transform: translateY(50%) scale(1.2) rotate(-270deg); opacity: 0.75; }
+  100% { transform: translateY(0) scale(1) rotate(-360deg); opacity: 1; }
+}
+
+@keyframes animateTopPoleLeftVariant7 {
+  0% { transform: translateY(-100%) scale(0.5) rotate(0deg); opacity: 0; }
+  25% { transform: translateY(0) scale(1) rotate(90deg); opacity: 0.25; }
+  50% { transform: translateY(50%) scale(1.5) rotate(180deg); opacity: 0.5; }
+  75% { transform: translateY(-50%) scale(1.2) rotate(270deg); opacity: 0.75; }
+  100% { transform: translateY(0) scale(1) rotate(360deg); opacity: 1; }
+}
+
+@keyframes animateTopPoleRightVariant7 {
+  0% { transform: translateY(-100%) scale(0.5) rotate(0deg); opacity: 0; }
+  25% { transform: translateY(0) scale(1) rotate(-90deg); opacity: 0.25; }
+  50% { transform: translateY(50%) scale(1.5) rotate(-180deg); opacity: 0.5; }
+  75% { transform: translateY(-50%) scale(1.2) rotate(-270deg); opacity: 0.75; }
+  100% { transform: translateY(0) scale(1) rotate(-360deg); opacity: 1; }
+}
+</styles>
+
+<script>
+function setAnimation(variant) {
+  const svgContainer = document.getElementById('svgContainer');
+  svgContainer.className = `svg-container ${variant}`;
+}
+
+// Set default animation variant on page load
+document.addEventListener('DOMContentLoaded', () => {
+  setAnimation('variant1');
+});
+</script>
+</html>
